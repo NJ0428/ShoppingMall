@@ -24,7 +24,9 @@ public class Notitest {
                 .build();
 
         // When
-        AdminNotiDTO savedDTO = notiService.save(adminNotiDTO);
+        //AdminNotiDTO savedDTO = notiService.save(adminNotiDTO);
+        
+        //System.out.println(notiService.getAllNotices());
         
 	}
 }
