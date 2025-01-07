@@ -17,4 +17,11 @@ public class MainController {
         return "index";
     }  
     
+    
+    @GetMapping(value = {"/test"})
+    public String test(){
+        return "test";
+    }  
 }
+
+
