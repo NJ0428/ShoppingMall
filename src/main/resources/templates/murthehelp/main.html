@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guns Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #8B0000, #000000);
+            color: white;
+        }
+
+        /* 상단 코드 표시 */
+        .top-bar {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #990000;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .top-bar span {
+            margin: 0 15px;
+        }
+
+        /* 상단 네비게이션 */
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #660000;
+            border-bottom: 2px solid #990000;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #FF4500;
+        }
+
+        /* 전체 레이아웃 */
+        .main-container {
+            display: flex;
+        }
+
+        /* 왼쪽 사이드바 */
+        .sidebar {
+            width: 200px;
+            height: 1000px;
+            background-color: #400000;
+            padding: 20px;
+        }
+
+        .sidebar h2 {
+            font-size: 24px;
+            color: #FF6347;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #FF6347;
+            cursor: pointer;
+        }
+
+        .sidebar ul li a:hover,
+        .sidebar ul li a.active {
+            color: white; /* 선택되거나 호버 시 흰색으로 변경 */
+        }
+
+        /* 하위 메뉴 숨김 */
+        .submenu {
+            display: none;
+            padding-left: 20px;
+        }
+
+        /* 콘텐츠 영역 */
+        .content {
+            flex-grow: 1;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        /* 상품 카드 */
+		/* 콘텐츠 영역 */
+		.content {
+		    display: grid;
+		    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 300px 이상, 여유 공간에 맞게 카드 배치 */
+		    gap: 30px; /* 카드 간의 간격 */
+		    justify-content: center; /* 가운데 정렬 */
+		    padding: 20px;
+		}
+
+		/* 상품 카드 */
+		.card {
+		    background-color: #222;
+		    border: 1px solid #444;
+		    width: 300px; /* 고정된 너비 */
+		    height: 300px; /* 더 길어진 높이 */
+		    padding: 15px;
+		    border-radius: 8px;
+		    text-align: center;
+		    color: white;
+		    flex-direction: column; /* 내용을 세로 정렬 */
+		    justify-content: space-between; /* 내용 간 간격 배분 */
+		    align-items: center;
+		}
+		
+		.card img {
+		    width: 80%; /* 이미지 너비 고정 */
+		    height: 220px; /* 고정된 높이 */
+		    object-fit: cover; /* 이미지를 카드 크기에 맞게 조정 */
+		    border-radius: 4px;
+		}
+		
+		.card h3 {
+		    margin: 10px 0;
+		    font-size: 18px;
+		}
+		
+		.card .price {
+		    color: #FF4500;
+		    font-weight: bold;
+		    margin-top: 5px;
+		}
+
+    </style>
+</head>
+<body>
+    <!-- 상단 코드 표시 -->
+    <div class="top-bar">
+        <span>Code <span style="color: red;">Red</span></span> | 
+        <span>Code <span style="color: purple;">Purple</span></span> | 
+        <span>Code <span style="color: yellow;">Yellow</span></span>
+    </div>
+
+    <!-- 상단 네비게이션 -->
+    <div class="navbar">
+        <a href="#">Guns</a>
+        <a href="#">Weapons</a>
+        <a href="#">Bombs</a>
+        <a href="#">Drugs</a>
+    </div>
+
+    <!-- 전체 레이아웃 -->
+    <div class="main-container">
+        <!-- 왼쪽 사이드바 -->
+        <div class="sidebar">
+            <h2>Guns</h2>
+            <ul>
+                <li>
+                    <a href="#" class="dropdown">Handgun</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-item">Revolver</a></li>
+                        <li><a href="#" class="submenu-item">Derringer</a></li>
+                        <li><a href="#" class="submenu-item">Pistol</a></li>
+                        <li><a href="#" class="submenu-item">Machine Pistol</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown">Machine Gun</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-item">Heavy Machine Gun</a></li>
+                        <li><a href="#" class="submenu-item">Light Machine Gun</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown">Rifle</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-item">Assault Rifle</a></li>
+                        <li><a href="#" class="submenu-item">Sniper Rifle</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown">Shotgun</a>
+                    <ul class="submenu">
+                        <li><a href="#" class="submenu-item">Pump-Action</a></li>
+                        <li><a href="#" class="submenu-item">Semi-Automatic</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 콘텐츠 영역 -->
+        <div class="content">
+            <!-- 카드 아이템 -->
+            <div class="card">
+                <img src="../images/gun_1.png" alt="Item P020">
+                <h3>item No. P020</h3>
+                <p class="price">₩1,796,000</p>
+            </div>
+            <div class="card">
+                <img src="../images/gun_2.png" alt="Item P021">
+                <h3>item No. P021</h3>
+                <p class="price">₩1,040,000</p>
+            </div>
+            <div class="card">
+                <img src="../images/gun_3.png" alt="Item P033">
+                <h3>item No. P033</h3>
+                <p class="price">₩807,000</p>
+            </div>
+            <div class="card">
+                <img src="../images/gun_4.png" alt="Item P045">
+                <h3>item No. P045</h3>
+                <p class="price">₩2,300,000</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
